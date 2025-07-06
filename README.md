@@ -33,7 +33,7 @@
 
 | 📊 KMeans Visualization App | 🖼️ Image Color Reduction App |
 |--------------------------|--------------------------|
-| ![img](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/kmeans_visualization_app_demo.png)  | ![img](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/kmeans_image_app_demo.png)  |
+| ![img](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/kmeans_visualization_app_demo.png)  | ![img]()  |
 
 | Original Image             | Processed Image with 10 colors     |
 |----------------------------------------|-------------------------------------|
@@ -53,7 +53,6 @@ kmeans-app/
 ├── requirements.txt
 └── README.md
 ```
----
 
 ---
 
