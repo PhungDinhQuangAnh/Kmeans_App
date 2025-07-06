@@ -1,9 +1,4 @@
-<h1 align="center"> 🎨 KMeans App – Clustering Visualization & Image Color Reduction </h1>
-
-A complete Python GUI application to:
-- 📊 Visualize and compare **KMeans algorithms** interactively with 2D point clustering
-- 📂 Upload and compress images by reducing colors using **KMeans clustering**
-- 🖼️ Built with **Tkinter**, **Pygame**, and **Scikit-learn**
+<h1 align="center"> 🎨 KMeans App</h1>
 
 ---
 
@@ -12,74 +7,38 @@ A complete Python GUI application to:
 | Module                        | Description                                                                 |
 |------------------------------|-----------------------------------------------------------------------------|
 | 📊 Clustering Visualization   | Interactive 2D KMeans simulation (custom & sklearn-based, via Pygame)      |
-| 🎨 Image Color Reduction     | Reduce image colors using KMeans (Tkinter GUI)                             |
+| 🖼️ Image Color Reduction     | Reduce image colors using KMeans (Tkinter GUI)                             |
 
-
----
-
-## 📸 Demo
-
-| 🎨 Image Color Reduction | 📊 KMeans Visualization |
-|--------------------------|--------------------------|
-| ![img](assets/img1.png)  | ![img](assets/img2.png)  |
-
-
----
-
-## 🚀 Features
-
-### 📈 Clustering Visualization (Pygame)
-- ✅ Interactively add 2D points and observe clustering
-- ✅ Switch between **custom KMeans implementation** and **Scikit-learn KMeans**
-- ✅ Visual feedback of centroid updates and error reduction
-- ✅ Explore and understand unsupervised learning concepts step-by-step
-
-### 🎨 Image Color Reduction (Tkinter GUI)
-- ✅ Upload and compress images with reduced colors
-- ✅ Choose number of clusters (k) interactively
-- ✅ Auto-save processed images to *"assets"* folder
-- ✅ Supports most common image formats
-  
 ---
 
 ## 🧠 How It Works
 
-### 🖼️ 1. KMeans Image Color Reduction (Tkinter GUI)
+### 📈 1. KMeans Clustering Visualization (Pygame)
+- Interactively add 2D points and random centroids
+- Includes both:
+  - A **custom-built KMeans algorithm** (implemented from scratch) (Run Button)
+  - The **built-in Scikit-learn KMeans** (Algorithm Button)
+- Visualize how clusters are formed, centroids are updated, and errors decrease
+- Lets users compare step-by-step learning vs. library abstraction
+- Great for learning and teaching **unsupervised learning** intuitively
+  
+### 🖼️ 2. KMeans Image Color Reduction (Tkinter GUI)
 - Upload `.jpg`, `.png`, `.jpeg`, `.bmp`, `.gif`, `.tiff`, etc.
 - Set number of clusters (k) to reduce the number of colors
 - Displays both the **original** and **processed** image
 - Saves the processed image with appropriate format in `assets/`
 
-### 📈 2. KMeans Clustering Visualization (Pygame)
-- Interactively add 2D points and random centroids
-- Includes both:
-  - A **custom-built KMeans algorithm** (implemented from scratch)
-  - The **built-in Scikit-learn KMeans**
-- Visualize how clusters are formed, centroids are updated, and errors decrease
-- Lets users compare step-by-step learning vs. library abstraction
-- Great for learning and teaching **unsupervised learning** intuitively
-
 ---
 
-## 🧪 Requirements
+## 📸 Demo
 
-Install dependencies using:
+| 📊 KMeans Visualization App | 🖼️ Image Color Reduction App |
+|--------------------------|--------------------------|
+| ![img](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/kmeans_visualization_app_demo.png)  | ![img](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/kmeans_image_app_demo.png)  |
 
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## ▶️ Run the Application
-
-```bash
-# Run image color reduction app
-python kmeans_image_processing.py
-
-# Run visualization tool
-python kmeans_visualization.py
-```
+| Original Image             | Processed Image with 10 colors     |
+|----------------------------------------|-------------------------------------|
+| ![Original](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/test.jpg) | ![Processed](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/test_processed.jpg) |
 
 ---
 
@@ -94,20 +53,26 @@ kmeans-app/
 ├── requirements.txt
 └── README.md
 ```
-
 ---
 
-## ✨ Screenshots
+## ▶️ Setup & Run Application
 
-| Original vs Processed Image             | KMeans Clustering Visualization     |
-|----------------------------------------|-------------------------------------|
-| ![Processed](assets/sample_result.jpg) | ![Visualization](assets/visual.png) |
+```bash
+# Install Requirements
+pip install -r requirements.txt
+
+# Run kmeans visualization app
+python kmeans_visualization.py
+
+# Run image color reduction app
+python kmeans_image_processing.py
+```
 
 ---
 
 ## 💡 Why This Project?
 
-This project demonstrates your ability to:
+This project demonstrates my ability to:
 
 🖼️ **Image Color Reduction**
 - Apply unsupervised learning for practical image compression
