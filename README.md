@@ -13,16 +13,15 @@
 
 ## 🧠 How It Works
 
-### 📈 1. KMeans Clustering Visualization (Pygame)
+📈 **1. KMeans Clustering Visualization (Pygame)**
 - Interactively add 2D points and random centroids
 - Includes both:
   - A **custom-built KMeans algorithm** (implemented from scratch) (Run Button)
   - The **built-in Scikit-learn KMeans** (Algorithm Button)
 - Visualize how clusters are formed, centroids are updated, and errors decrease
 - Lets users compare step-by-step learning vs. library abstraction
-- Great for learning and teaching **unsupervised learning** intuitively
-  
-### 🖼️ 2. KMeans Image Color Reduction (Tkinter GUI)
+
+🖼️ **2. KMeans Image Color Reduction (Tkinter GUI)**
 - Upload `.jpg`, `.png`, `.jpeg`, `.bmp`, `.gif`, `.tiff`, etc.
 - Set number of clusters (k) to reduce the number of colors
 - Displays both the **original** and **processed** image
@@ -39,6 +38,7 @@
 | Original Image             | Processed Image with 10 colors     |
 |----------------------------------------|-------------------------------------|
 | ![Original](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/test.jpg) | ![Processed](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/test_processed.jpg) |
+|*size: 1080 x 1350 - 374.5KB*|*size: 1080 x 1350 - 316.1 KB*|
 
 ---
 
@@ -53,6 +53,19 @@ kmeans-app/
 ├── requirements.txt
 └── README.md
 ```
+---
+
+---
+
+## 🔧 Technologies Used
+
+- Python 
+- Scikit-learn – for clustering (KMeans)
+- Pygame – for interactive clustering visualization
+- Tkinter – for image processing GUI
+- NumPy – for numerical operations
+- Pillow (PIL) – for image loading and saving
+
 ---
 
 ## ▶️ Setup & Run Application
@@ -70,17 +83,16 @@ python kmeans_image_processing.py
 
 ---
 
-## 💡 Why This Project?
+## 🛠 Applications
 
-This project demonstrates my ability to:
+📈 **KMeans Clustering Visualization**
+- ✅ **Educational tool** to demonstrate unsupervised learning
+- ✅ **Custom-built KMeans algorithm** with side-by-side comparison to **Scikit-learn's KMeans**
+- ✅ **Step-by-step clustering process** with point assignment animations
+- ✅ Great for teaching, presentations, or workshops
 
-🖼️ **Image Color Reduction**
-- Apply unsupervised learning for practical image compression
-- Build intuitive GUI using Tkinter
-- Work with image formats and color spaces
-
-📊 **KMeans Clustering Visualization**
-- Implement clustering algorithm manually from scratch
-- Compare and benchmark with built-in KMeans
-- Visualize clustering dynamics step-by-step
-- Teach or learn clustering with visual intuition
+🖼 **KMeans Image Color Reduction**
+- ✅ **Reduce image size** by minimizing the number of colors
+- ✅ **Preprocess image data** for machine learning models
+- ✅ **Create minimalistic artistic effects** from real-world photos
+- ✅ **Extract dominant colors** for product suggestions (fashion, interior, etc.)
