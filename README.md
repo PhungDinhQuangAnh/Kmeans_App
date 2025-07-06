@@ -1,33 +1,45 @@
-# 🎨 KMeans App – Image Color Reduction & Clustering Visualization
+<h1 align="center"> 🎨 KMeans App – Clustering Visualization & Image Color Reduction </h1>
 
 A complete Python GUI application to:
-- 📂 Upload and compress images by reducing colors using **KMeans clustering**
 - 📊 Visualize and compare **KMeans algorithms** interactively with 2D point clustering
+- 📂 Upload and compress images by reducing colors using **KMeans clustering**
 - 🖼️ Built with **Tkinter**, **Pygame**, and **Scikit-learn**
+
+---
+
+## 🧭 What This Project Offers
+
+| Module                        | Description                                                                 |
+|------------------------------|-----------------------------------------------------------------------------|
+| 📊 Clustering Visualization   | Interactive 2D KMeans simulation (custom & sklearn-based, via Pygame)      |
+| 🎨 Image Color Reduction     | Reduce image colors using KMeans (Tkinter GUI)                             |
+
 
 ---
 
 ## 📸 Demo
 
-> 📷 _Screenshots coming soon – add images in `assets/` folder and update links below._
+| 🎨 Image Color Reduction | 📊 KMeans Visualization |
+|--------------------------|--------------------------|
+| ![img](assets/img1.png)  | ![img](assets/img2.png)  |
 
-```
-kmeans-app/
-├── assets/
-│   ├── sample_result.jpg      # Example processed image
-│   └── visual.png             # Screenshot of visualization
-```
 
 ---
 
 ## 🚀 Features
 
-- ✅ Easy-to-use GUI for image color reduction
-- ✅ Choose number of clusters (k) interactively
-- ✅ Auto-save processed images to assets folder
-- ✅ Visual comparison between custom-built and built-in KMeans algorithms
-- ✅ Clean codebase with modular structure
+### 📈 Clustering Visualization (Pygame)
+- ✅ Interactively add 2D points and observe clustering
+- ✅ Switch between **custom KMeans implementation** and **Scikit-learn KMeans**
+- ✅ Visual feedback of centroid updates and error reduction
+- ✅ Explore and understand unsupervised learning concepts step-by-step
 
+### 🎨 Image Color Reduction (Tkinter GUI)
+- ✅ Upload and compress images with reduced colors
+- ✅ Choose number of clusters (k) interactively
+- ✅ Auto-save processed images to *"assets"* folder
+- ✅ Supports most common image formats
+  
 ---
 
 ## 🧠 How It Works
@@ -40,10 +52,12 @@ kmeans-app/
 
 ### 📈 2. KMeans Clustering Visualization (Pygame)
 - Interactively add 2D points and random centroids
-- Includes both a **custom-built KMeans algorithm** (implemented from scratch) and the **built-in Scikit-learn KMeans**
+- Includes both:
+  - A **custom-built KMeans algorithm** (implemented from scratch)
+  - The **built-in Scikit-learn KMeans**
 - Visualize how clusters are formed, centroids are updated, and errors decrease
-- Enables learners to explore the inner workings of KMeans
-- Great for learning and teaching **unsupervised learning** step-by-step
+- Lets users compare step-by-step learning vs. library abstraction
+- Great for learning and teaching **unsupervised learning** intuitively
 
 ---
 
@@ -74,7 +88,7 @@ python kmeans_visualization.py
 ```
 kmeans-app/
 │
-├── assets/                    # Output images & screenshots
+├── assets/                    # Output images & demo
 ├── kmeans_image_processing.py  # Tkinter GUI for image color compression
 ├── kmeans_visualization.py     # Pygame app for visualizing KMeans clustering
 ├── requirements.txt
@@ -94,41 +108,14 @@ kmeans-app/
 ## 💡 Why This Project?
 
 This project demonstrates your ability to:
-- Apply **unsupervised learning** techniques to real-world problems
-- Build **intuitive GUI applications** using Tkinter and Pygame
-- Present complex concepts like KMeans clustering in a **visually appealing** way
-- Work with **image processing, numpy, and sklearn**
-- Implement and compare **custom vs. built-in algorithms** for deeper learning insights
 
-Great for your portfolio to showcase skills in:
-- Python GUI development
-- Machine Learning
-- Image Processing
-- Algorithm Visualization
+🖼️ **Image Color Reduction**
+- Apply unsupervised learning for practical image compression
+- Build intuitive GUI using Tkinter
+- Work with image formats and color spaces
 
----
-
-## 👨‍💻 Author
-
-**Phùng Đình Quang Anh**
-
-> 💼 Add your GitHub or LinkedIn profile here!
-
----
-
-## ⭐ Star This Project!
-
-If you find this project helpful or interesting, please consider giving it a ⭐ on GitHub!
-
----
-
-### 🔖 License
-
-MIT License (or specify if different).
-
-Great for my portfolio to showcase skills in:
-- Python GUI development
-- Machine Learning
-- Image Processing
-- Algorithm Visualization
-
+📊 **KMeans Clustering Visualization**
+- Implement clustering algorithm manually from scratch
+- Compare and benchmark with built-in KMeans
+- Visualize clustering dynamics step-by-step
+- Teach or learn clustering with visual intuition
