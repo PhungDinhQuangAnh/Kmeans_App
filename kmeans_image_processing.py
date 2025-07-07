@@ -16,11 +16,13 @@ def reduce_colors(image_path, n_colors=10):
     labels = kmeans.predict(img_flat)
     img_recolored = new_colors[labels].reshape(h, w, 3)
 
-    return img, Image.fromarray(img_recolored)
+    # Image for GUI display
+    display_img = Image.fromarray(img_recolored)
+    return img, display_img, img_recolored
 
 def upload_image():
     file_path = filedialog.askopenfilename(
-    filetypes=[("Image files", "*.jpg *.jpeg *.png *.bmp *.gif *.tiff *.tif *.webp *.ico *.ppm *.pgm")])
+        filetypes=[("Image files", "*.jpg *.jpeg *.png *.bmp *.gif *.tiff *.tif *.webp *.ico *.ppm *.pgm")])
     if file_path:
         try:
             k = int(entry_k.get())
@@ -30,11 +32,21 @@ def upload_image():
             messagebox.showerror("Error", "Please enter a valid number of colors (> 0)")
             return
 
-        original_img, processed_img = reduce_colors(file_path, n_colors=k)
+        original_img, processed_img, processed_np = reduce_colors(file_path, n_colors=k)
         base_name, ext = os.path.splitext(os.path.basename(file_path))
-        save_path = f"assets/{base_name}_processed{ext.lower()}"
-        processed_img.save(save_path)
+        ext = ext.lower()
+        save_path = f"assets/{base_name}_processed{ext}"
 
+        try:
+            if ext in ['.jpg', '.jpeg']:
+                Image.fromarray(processed_np).save(save_path, format="JPEG", quality=70, optimize=True)
+            elif ext in ['.png']:
+                Image.fromarray(processed_np).convert("P", palette=Image.ADAPTIVE).save(save_path, format="PNG", optimize=True)
+            else:
+                Image.fromarray(processed_np).save(save_path)
+        except Exception as e:
+            messagebox.showwarning("Warning", f"Image saved but not optimized. Reason: {str(e)}")
+            Image.fromarray(processed_np).save(save_path)
 
         show_images(original_img, processed_img)
         messagebox.showinfo("Done", f"Processed image saved at:\n{save_path}")
@@ -115,11 +127,3 @@ tk.Label(root, text="Set number of colors, upload image, then click to process",
          font=("Segoe UI", 10), bg="#f5f5f5", fg="#777").pack(pady=8)
 
 root.mainloop()
-
-
-
-
-
-
-
-
