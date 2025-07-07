@@ -15,6 +15,7 @@ def draw_graphics():
 	BLACK1=(61, 57, 57)
 	TEXT_COLOR = (255,255,255)
 	GREEN = (114, 219, 130)
+	
 	# Font
 	FONT = pygame.font.SysFont("Time New Romans",40)
 	FONT_SMALL = pygame.font.SysFont("Time New Romans",33)
