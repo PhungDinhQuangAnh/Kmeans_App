@@ -45,7 +45,7 @@
 ## 📁 Project Structure
 
 ```
-kmeans-app/
+Kmeans_App/
 │
 ├── assets/                    # Output images & demo
 ├── kmeans_image_processing.py  # Tkinter GUI for image color compression
