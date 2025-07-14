@@ -33,11 +33,11 @@
 
 | 📊 KMeans Visualization App | 🖼️ Image Color Reduction App |
 |--------------------------|--------------------------|
-| ![img](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/kmeans_visualization_app_demo.png)  | ![img](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/kmeans_image_app_demo.png)  |
+| ![img](https://github.com/PhungDinhQuangAnh/Kmeans_App/blob/main/assets/kmeans_visualization_app_demo.png)  | ![img](https://github.com/PhungDinhQuangAnh/Kmeans_App/blob/main/assets/kmeans_image_app_demo.png)  |
 
 | Original Image             | Processed Image with 10 colors     |
 |----------------------------------------|-------------------------------------|
-| ![Original](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/test.jpg) | ![Processed](https://github.com/PhungDinhQuangAnh/kmeans-app/blob/main/assets/test_processed.jpg) |
+| ![Original](https://github.com/PhungDinhQuangAnh/Kmeans_App/blob/main/assets/test.jpg) | ![Processed](https://github.com/PhungDinhQuangAnh/Kmeans_App/blob/main/assets/test_processed.jpg) |
 |*size: 1080 x 1350 - 374.5KB*|*size: 1080 x 1350 - 316.1 KB*|
 
 ---
