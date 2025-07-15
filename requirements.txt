@@ -1,4 +1,4 @@
 numpy
-Pillow
+pillow
 scikit-learn
 pygame
