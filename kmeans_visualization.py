@@ -202,7 +202,7 @@ while running:
 					clusters = kmeans.predict(points)
 					error = 0
 					for i in range(len(points)):
-							minn = 13062006+8092006+14052022
+							minn = float('inf')
 							for j in range(len(labels)):
 								if minn > distance(points[i],labels[j]):
 									minn = distance(points[i],labels[j])
