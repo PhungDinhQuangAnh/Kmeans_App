@@ -14,16 +14,16 @@
 ## 🧠 How It Works
 
 📈 **1. KMeans Clustering Visualization (Pygame)**
-- Interactively add 2D points and random centroids
+- Interactively add 2D points, set (k) clusters and random centroids
 - Includes both:
-  - A **custom-built KMeans algorithm** (implemented from scratch) (Run Button)
-  - The **built-in Scikit-learn KMeans** (Algorithm Button)
+  - A **custom-built KMeans algorithm** (implemented from scratch) (*Run Button*)
+  - The **built-in Scikit-learn KMeans** (*Algorithm Button*)
 - Visualize how clusters are formed, centroids are updated, and errors decrease
-- Lets users compare step-by-step learning vs. library abstraction
+- Lets users compare step-by-step learning vs library abstraction
 
 🖼️ **2. KMeans Image Color Reduction (Tkinter GUI)**
 - Upload `.jpg`, `.png`, `.jpeg`, `.bmp`, `.gif`, `.tiff`, etc.
-- Set number of clusters (k) to reduce the number of colors
+- Set number of **clusters (k)** to reduce the number of colors
 - Displays both the **original** and **processed** image
 - Saves the processed image with appropriate format in `assets/`
 
