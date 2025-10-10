@@ -2,96 +2,104 @@
 
 ---
 
-## 🧭 What This Project Offers
+## 🧭 Những Gì Dự Án Này Mang Lại
 
-| Module                        | Description                                                                 |
-|------------------------------|-----------------------------------------------------------------------------|
-| 📊 Clustering Visualization   | Interactive 2D KMeans simulation (custom & sklearn-based, via Pygame)      |
-| 🖼️ Image Color Reduction     | Reduce image colors using KMeans (Tkinter GUI)                             |
+| Mô-đun                             | Mô tả                                                                     |
+|------------------------------------|---------------------------------------------------------------------------|
+| 📊 Trực Quan Hóa Kmeans            | Mô phỏng KMeans 2D tương tác (tùy chỉnh & dựa trên sklearn, qua Pygame)   |
+| 🖼️ Giảm Số Lượng Màu Trong Ảnh     | Giảm số lượng màu trong ảnh bằng KMeans (giao diện Tkinter)               |
 
 ---
 
-## 🧠 How It Works
+## 🧠 Cách Hoạt Động
 
-📈 **1. KMeans Clustering Visualization (Pygame)**
-- Interactively add 2D points, set (k) clusters and random centroids
-- Includes both:
-  - A **custom-built KMeans algorithm** (implemented from scratch) (*Run Button*)
-  - The **built-in Scikit-learn KMeans** (*Algorithm Button*)
-- Visualize how clusters are formed, centroids are updated, and errors decrease
-- Lets users compare step-by-step learning vs library abstraction
+📈 **1. Trực quan hóa phân cụm KMeans (Pygame)**
 
-🖼️ **2. KMeans Image Color Reduction (Tkinter GUI)**
-- Upload `.jpg`, `.png`, `.jpeg`, `.bmp`, `.gif`, `.tiff`, etc.
-- Set number of **clusters (k)** to reduce the number of colors
-- Displays both the **original** and **processed** image
-- Saves the processed image with appropriate format in `assets/`
+- Thêm điểm 2D tương tác, đặt số cụm (k) và các tâm cụm ngẫu nhiên
+- Bao gồm cả:
+  - **Thuật toán KMeans tự xây dựng** (cài đặt từ đầu) (*Nút Run*)
+  - **KMeans tích hợp sẵn của Scikit-learn** (*Nút Algorithm*)
+- Trực quan hóa cách các cụm được hình thành, tâm cụm được cập nhật và sai số giảm dần
+- Giúp người dùng so sánh giữa quá trình học từng bước và cách thư viện trừu tượng hóa
+
+🖼️ **2. Giảm số lượng màu trong ảnh bằng KMeans (Giao diện Tkinter)**
+
+- Tải lên các tệp `.jpg`, `.png`, `.jpeg`, `.bmp`, `.gif`, `.tiff`, v.v.
+- Thiết lập số lượng **cụm (k)** để giảm số màu trong ảnh
+- Hiển thị cả ảnh **gốc** và ảnh **đã xử lý**
+- Lưu ảnh đã xử lý với định dạng phù hợp trong thư mục `assets/`
 
 ---
 
 ## 📸 Demo
 
-| 📊 KMeans Visualization App | 🖼️ Image Color Reduction App |
-|--------------------------|--------------------------|
+| 📊 Ứng Dụng Trực Quan Hóa Kmeans                                                                            | 🖼️ Ứng Dụng Giảm Màu Ảnh |
+|-------------------------------------------------------------------------------------------------------------|--------------------------|
 | ![img](https://github.com/PhungDinhQuangAnh/Kmeans_App/blob/main/assets/kmeans_visualization_app_demo.png)  | ![img](https://github.com/PhungDinhQuangAnh/Kmeans_App/blob/main/assets/kmeans_image_app_demo.png)  |
 
-| Original Image             | Processed Image with 10 colors     |
-|----------------------------------------|-------------------------------------|
+| Ảnh Gốc                                                                                | Ảnh Đã Xử Lí Còn 10 Màu             |
+|----------------------------------------------------------------------------------------|-------------------------------------|
 | ![Original](https://github.com/PhungDinhQuangAnh/Kmeans_App/blob/main/assets/test.jpg) | ![Processed](https://github.com/PhungDinhQuangAnh/Kmeans_App/blob/main/assets/test_processed.jpg) |
-|*size: 1080 x 1350 - 374.5KB*|*size: 1080 x 1350 - 316.1 KB*|
+|*size: 1080 x 1350 - 374.5KB*                                                           |*size: 1080 x 1350 - 316.1 KB*       |
 
 ---
 
-## 📁 Project Structure
+## 📁 Cấu Trúc Dự Án
 
 ```
 Kmeans_App/
 │
-├── assets/                    # Output images & demo
-├── kmeans_image_processing.py  # Tkinter GUI for image color compression
-├── kmeans_visualization.py     # Pygame app for visualizing KMeans clustering
+├── assets/                     # Ảnh đầu ra & bản demo
+├── kmeans_image_processing.py  # Giao diện Tkinter cho việc nén màu ảnh
+├── kmeans_visualization.py     # Ứng dụng Pygame để trực quan hóa phân cụm KMeans
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 🔧 Technologies Used
+## 🔧 Công Nghệ Sử Dụng
 
-- Python 
-- Scikit-learn – for clustering (KMeans)
-- Pygame – for interactive clustering visualization
-- Tkinter – for image processing GUI
-- NumPy – for numerical operations
-- Pillow (PIL) – for image loading and saving
+- **Python**
+- **Scikit-learn** – dùng cho thuật toán phân cụm (KMeans)
+- **Pygame** – dùng để trực quan hóa phân cụm tương tác
+- **Tkinter** – dùng cho giao diện xử lý ảnh
+- **NumPy** – dùng cho các phép toán số học
+- **Pillow (PIL)** – dùng để tải và lưu hình ảnh
 
 ---
 
-## ▶️ Setup & Run Application
+
+---
+
+## ▶️ Cài Đặt Và Chạy Ứng Dụng
 
 ```bash
-# Install Requirements
+# Cài đặt các yêu cầu (thư viện phụ thuộc)
 pip install -r requirements.txt
 
-# Run kmeans visualization app
+# Chạy ứng dụng trực quan hóa KMeans
 python kmeans_visualization.py
 
-# Run image color reduction app
+# Chạy ứng dụng giảm số lượng màu trong ảnh
 python kmeans_image_processing.py
 ```
 
 ---
 
-## 🛠 Applications
+## 🛠 Ứng dụng
 
-📈 **KMeans Clustering Visualization**
-- ✅ **Educational tool** to demonstrate unsupervised learning
-- ✅ **Custom-built KMeans algorithm** with side-by-side comparison to **Scikit-learn's KMeans**
-- ✅ **Step-by-step clustering process** with point assignment animations
-- ✅ Great for teaching, presentations, or workshops
+📈 **Trực quan hóa phân cụm KMeans**
 
-🖼 **KMeans Image Color Reduction**
-- ✅ **Reduce image size** by minimizing the number of colors
-- ✅ **Preprocess image data** for machine learning models
-- ✅ **Create minimalistic artistic effects** from real-world photos
-- ✅ **Extract dominant colors** for product suggestions (fashion, interior, etc.)
+- ✅ **Công cụ học tập** minh họa học không giám sát
+- ✅ **Thuật toán KMeans tự xây dựng** kèm so sánh song song với **KMeans của Scikit-learn**
+- ✅ **Quá trình phân cụm từng bước** với hoạt ảnh gán điểm trực quan
+- ✅ Phù hợp cho giảng dạy, thuyết trình hoặc hội thảo
+
+🖼 **Giảm số lượng màu trong ảnh bằng KMeans**
+
+- ✅ **Giảm kích thước ảnh** bằng cách tối thiểu hóa số lượng màu
+- ✅ **Tiền xử lý dữ liệu ảnh** cho các mô hình học máy
+- ✅ **Tạo hiệu ứng nghệ thuật tối giản** từ ảnh thực tế
+- ✅ **Trích xuất màu chủ đạo** phục vụ gợi ý sản phẩm (thời trang, nội thất, v.v.)
+
