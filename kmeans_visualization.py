@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 def distance(p1,p2):
 	return sqrt((p1[0]-p2[0]) * (p1[0]-p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]))
 def draw_graphics():
-	# COLORS
+	# Màu
 	BG=(47, 49, 54)
 	BORDER=(88, 89, 93)
 	BLACK=(34, 35, 36)
@@ -16,13 +16,13 @@ def draw_graphics():
 	TEXT_COLOR = (255,255,255)
 	GREEN = (114, 219, 130)
 	
-	# Font
+	# Phông chữ
 	FONT = pygame.font.SysFont("Time New Romans",40)
 	FONT_SMALL = pygame.font.SysFont("Time New Romans",33)
 	FONT_BIG = pygame.font.SysFont("Time New Romans",50)
 	FONT_SMALLER = pygame.font.SysFont("Time New Romans",23)
 
-	# TEXTS
+	# Chữ
 	PLUS_TEXT = FONT_BIG.render("+",True,TEXT_COLOR)
 	MINUS_TEXT = FONT_BIG.render("-",True,TEXT_COLOR)
 	RUN_TEXT = FONT_SMALL.render("RUN",True,TEXT_COLOR)
@@ -38,24 +38,24 @@ def draw_graphics():
 		NUMBER_POINTS_VALUE_TEXT = FONT_SMALL.render(str(0),True,(128, 226, 221))
 	error_value_text = FONT_SMALL.render(str(int(error)),True,(128, 226, 221))
 
-	# BackGround
+	# Nền
 	screen.fill(BG)
 
-	# Draw panel
+	# Vẽ khung bảng
 	pygame.draw.rect(screen,BORDER,(10,10,1280,480))
 	pygame.draw.rect(screen,BLACK,(13,13,1274,474))
 
-	# Draw reset_button
+	# Vẽ nút reset
 	pygame.draw.rect(screen,WHITE,(1146,528,104,44))
 	pygame.draw.rect(screen,GREY,(1148,530,100,40))
 	screen.blit(RESET_TEXT,(1153,537))
 
-	# Draw algorithm_button
+	# Vẽ nút thuật toán
 	pygame.draw.rect(screen,WHITE,(942,528,154,44))
 	pygame.draw.rect(screen,GREY,(944,530,150,40))
 	screen.blit(USE_ALGORITHM_TEXT,(949,540))
 
-	# Draw table
+	# Vẽ bảng
 	pygame.draw.rect(screen,RED,(622,498,270,90))
 		# NUMBER_POINTS
 	pygame.draw.rect(screen,BLACK1,(624,500,170,42))
@@ -72,17 +72,17 @@ def draw_graphics():
 	error_value_pos = error_value_text.get_rect(center=(842,566))
 	screen.blit(error_value_text,error_value_pos)
 
-	# Draw random_button
+	# Vẽ nút random
 	pygame.draw.rect(screen,WHITE,(344,528,114,44))
 	pygame.draw.rect(screen,GREY,(346,530,110,40))
 	screen.blit(RANDOM_TEXT,(349,540))
 
-	# Draw run_button
+	# Vẽ nút run
 	pygame.draw.rect(screen,WHITE,(508,528,64,44))
 	pygame.draw.rect(screen,GREY,(510,530,60,40))
 	screen.blit(RUN_TEXT,(515,540))
 
-	# Draw K
+	# Vẽ K
 		# "+""
 	pygame.draw.rect(screen,GREY,(50,528,44,44))
 	screen.blit(PLUS_TEXT,(62,529))
@@ -94,7 +94,7 @@ def draw_graphics():
 	pygame.draw.rect(screen,BLACK1,(96,530,152,40))
 	screen.blit(k_text,(144,540))
 
-	# Draw points
+	# Vẽ các điểm
 	for i in range(len(points)):
 		try:
 			pygame.draw.circle(screen,(255,255,255),(points[i][0],points[i][1]),8)
@@ -103,26 +103,26 @@ def draw_graphics():
 			pygame.draw.circle(screen,(255,255,255),(points[i][0],points[i][1]),8)
 			pygame.draw.circle(screen,(50,50,50),(points[i][0],points[i][1]),6)
 
-	# Draw labels
+	# Vẽ các nhãn
 	for i in range(len(labels)):
 		try:
 			pygame.draw.circle(screen,COLORS[i],(labels[i][0],labels[i][1]),12)
 		except:
 			COLORS.append((randint(0,255),randint(0,255),randint(0,255)))
 
-	# Draw mouse_pos
+	# Vẽ vị trí chuột
 	if 22<mouse_x<1278 and 22<mouse_y<478:
 		mouse_text = pygame.font.SysFont("sans",15).render("("+str(mouse_x)+","+str(mouse_y)+")",True,(248, 217, 110))
 		screen.blit(mouse_text,(mouse_x+10,mouse_y+10))
 
 pygame.init()
 
-# set up
+# Khởi tạo
 screen = pygame.display.set_mode((1300,600))
 caption = pygame.display.set_caption("KMeans Visualization")
 FPS = pygame.time.Clock()
 
-# Varriable
+# Biến
 k,error = 0,0
 points = []
 labels = []
@@ -138,7 +138,7 @@ while running:
 		if event.type == pygame.QUIT:
 			running = False
 		if event.type == pygame.MOUSEBUTTONDOWN:
-			# change k
+			# Thay đổi k
 			if 50<mouse_x<94 and 528<mouse_y<572:
 				k+=1
 			if 250<mouse_x<294 and 528<mouse_y<572:
@@ -147,12 +147,12 @@ while running:
 				else:
 					k=0
 
-			# create points on panel
+			# Tạo các điểm trên khung bảng
 			if 22<mouse_x<1278 and 22<mouse_y<478:
 				point = [mouse_x,mouse_y]
 				points.append(point)
 
-			# create labels with random
+			# Tạo ngẫu nhiên các nhãn
 			if 344<mouse_x<458 and 528<mouse_y<572:
 				labels = []
 				clusters = []
@@ -160,7 +160,7 @@ while running:
 					label = [randint(22,1278),randint(22,478)]
 					labels.append(label)
 
-			# Run
+			# Chạy
 			if 508<mouse_x<572 and 528<mouse_y<572:
 				try:
 					if labels != []:
@@ -177,7 +177,7 @@ while running:
 							clusters.append(x)
 				except:
 					continue
-				# Move labels to clusters
+				# Di chuyển các nhãn vào các cụm
 				for i in range(len(labels)):
 					dem = 1
 					for j in range(len(clusters)):
@@ -187,14 +187,14 @@ while running:
 							dem+=1
 					labels[i][0]/=dem
 					labels[i][1]/=dem
-			# Reset
+			# Khởi tạo lại
 			if 1146<mouse_x<1250 and 528<mouse_y<572:
 				k,error = 0,0
 				points = []
 				labels = []
 				clusters = []
 
-			# Algorithm
+			# Thuật toán
 			if 942<mouse_x<1096 and 528<mouse_y<572:
 				try:
 					kmeans = KMeans(n_clusters=k).fit(points)
@@ -213,5 +213,6 @@ while running:
 	pygame.display.flip()
 	FPS.tick(30)
 pygame.quit()
+
 
 
