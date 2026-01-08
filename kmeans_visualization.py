@@ -6,13 +6,13 @@ def distance(p1,p2):
 	return sqrt((p1[0]-p2[0]) * (p1[0]-p2[0]) + (p1[1] - p2[1]) * (p1[1] - p2[1]))
 def draw_graphics():
 	# Màu
-	BG=(47, 49, 54)
-	BORDER=(88, 89, 93)
-	BLACK=(34, 35, 36)
-	GREY=(151, 153, 154)
-	WHITE=(191, 194, 199)
-	RED=(222, 121, 121)
-	BLACK1=(61, 57, 57)
+	BG = (47, 49, 54)
+	BORDER = (88, 89, 93)
+	BLACK = (34, 35, 36)
+	GREY = (151, 153, 154)
+	WHITE = (191, 194, 199)
+	RED = (222, 121, 121)
+	BLACK1 = (61, 57, 57)
 	TEXT_COLOR = (255,255,255)
 	GREEN = (114, 219, 130)
 	
@@ -213,6 +213,7 @@ while running:
 	pygame.display.flip()
 	FPS.tick(30)
 pygame.quit()
+
 
 
 
