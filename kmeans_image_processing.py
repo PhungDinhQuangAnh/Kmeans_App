@@ -16,7 +16,6 @@ def reduce_colors(image_path, n_colors=10):
     labels = kmeans.predict(img_flat)
     img_recolored = new_colors[labels].reshape(h, w, 3)
 
-    # Image for GUI display
     display_img = Image.fromarray(img_recolored)
     return img, display_img, img_recolored
 
@@ -90,12 +89,10 @@ root.geometry("1100x750")
 root.configure(bg="#f5f5f5")
 root.resizable(False, False)
 
-# Title
 tk.Label(root, text="KMEANS COLOR REDUCTION", font=("Segoe UI", 24, "bold"), fg="#333", bg="#f5f5f5").pack(pady=(20, 6))
 tk.Label(root, text="Upload an image and reduce its colors using KMeans clustering",
          font=("Segoe UI", 12), fg="#555", bg="#f5f5f5").pack()
 
-# Controls
 control_frame = tk.Frame(root, bg="#f5f5f5")
 control_frame.pack(pady=14)
 
@@ -109,22 +106,19 @@ tk.Button(control_frame, text="Upload Image", font=("Segoe UI", 13, "bold"),
           bg="#007bff", fg="white", activebackground="#0056b3",
           relief="flat", padx=20, pady=7, command=upload_image).grid(row=0, column=2, padx=20)
 
-# Display frame
 display_frame = tk.Frame(root, bg="#f5f5f5")
 display_frame.pack(pady=20)
 
-# Initial placeholder
 placeholder = tk.Label(display_frame, text="Image Display Area", font=("Segoe UI", 13),
                        bg="#eee", width=90, height=20, relief="solid", bd=2)
 placeholder.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
 
-# Save path
 label_path = tk.Label(root, text="", font=("Segoe UI", 10), fg="#444", bg="#f5f5f5")
 label_path.pack(pady=8)
 
-# Footer
 tk.Label(root, text="Set number of colors, upload image, then click to process",
          font=("Segoe UI", 10), bg="#f5f5f5", fg="#777").pack(pady=8)
 
 root.mainloop()
+
 
